@@ -1,8 +1,10 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
+import { graphql } from "gatsby"
+import { Heading, Text, Box, Card } from "rebass"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import Link from "../components/styles/link"
 
 export default function({ data, pageContext, location }) {
   const post = data.markdownRemark
@@ -15,26 +17,48 @@ export default function({ data, pageContext, location }) {
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
       />
-      <h1>{post.frontmatter.title}</h1>
-      <p>{post.frontmatter.date}</p>
-      <div dangerouslySetInnerHTML={{ __html: post.html }} />
-      <hr />
-      <ul>
-        <li>
+      <Card
+        bg="#fff"
+        p={[4]}
+        my={[5]}
+        borderRadius="16px"
+        boxShadow="0 10px 30px rgba(0, 0, 0, .1)"
+      >
+        <Heading fontSize={[1]} mb={[3]} color="rgba(14,30,37,.54)">
+          {post.frontmatter.date}
+        </Heading>
+        <Heading fontSize={[6]} color="">
+          {post.frontmatter.title}
+        </Heading>
+
+        <Text
+          fontSize={[2, 3]}
+          my={[5]}
+          lineHeight="1.8"
+          dangerouslySetInnerHTML={{ __html: post.html }}
+        />
+        <hr />
+        <Box as="ul" style={{ listStyle: "none" }}>
           {previous && (
-            <Link to={previous.fields.slug} rel="prev">
-              ← {previous.frontmatter.title}
-            </Link>
+            <li>
+              <Heading my={[4]} fontSize={[3]}>
+                <Link to={previous.fields.slug} rel="prev">
+                  Next post: {previous.frontmatter.title}
+                </Link>
+              </Heading>
+            </li>
           )}
-        </li>
-        <li>
           {next && (
-            <Link to={next.fields.slug} rel="next">
-              {next.frontmatter.title} →
-            </Link>
+            <li>
+              <Heading my={[4]} fontSize={[3]}>
+                <Link to={next.fields.slug} rel="next">
+                  Previous post: {next.frontmatter.title}
+                </Link>
+              </Heading>
+            </li>
           )}
-        </li>
-      </ul>
+        </Box>
+      </Card>
     </Layout>
   )
 }
@@ -49,7 +73,7 @@ export const pageQuery = graphql`
     }
     markdownRemark(fields: { slug: { eq: $slug } }) {
       id
-      excerpt(pruneLength: 160)
+      excerpt(pruneLength: 300)
       html
       frontmatter {
         title
