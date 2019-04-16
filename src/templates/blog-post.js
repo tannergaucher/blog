@@ -17,13 +17,7 @@ export default function({ data, pageContext, location }) {
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
       />
-      <Card
-        bg="#fff"
-        p={[4]}
-        my={[5]}
-        borderRadius="16px"
-        boxShadow="0 10px 30px rgba(0, 0, 0, .1)"
-      >
+      <Card bg="#fff" p={[4]} my={[5]}>
         <Heading fontSize={[1]} mb={[3]} color="rgba(14,30,37,.54)">
           {post.frontmatter.date}
         </Heading>

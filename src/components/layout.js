@@ -1,8 +1,8 @@
 import React from "react"
 import { Heading, Box } from "rebass"
+import GlobalStyle from "../components/styles/globalStyles"
 
 import Link from "../components/styles/link"
-import "./layout.css"
 
 export default function({ location, children, title }) {
   const rootPath = `${__PATH_PREFIX__}/`
@@ -24,6 +24,7 @@ export default function({ location, children, title }) {
 
   return (
     <>
+      <GlobalStyle />
       <Box as="header" m={[2]}>
         {header}
       </Box>
