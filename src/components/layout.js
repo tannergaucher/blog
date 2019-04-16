@@ -10,27 +10,24 @@ export default function({ location, children, title }) {
 
   if (location.pathname === rootPath) {
     header = (
-      <Heading fontSize={[4]}>
-        <Link to={`/`}>{title}</Link>
-      </Heading>
+      <>
+        <h1>{title}</h1>
+        <h5>Software Development. Learning in the Open.</h5>
+      </>
     )
   } else {
     header = (
-      <Heading fontSize={[4]} color="rgba(14,30,37,.54)">
+      <h4>
         <Link to={`/`}>Tanner Gaucher</Link>
-      </Heading>
+      </h4>
     )
   }
 
   return (
-    <>
+    <div style={{ maxWidth: "850px", margin: "0 auto" }}>
       <GlobalStyle />
-      <Box as="header" m={[2]}>
-        {header}
-      </Box>
-      <Box style={{ maxWidth: "800px", margin: "0 auto" }} p={[2, 3]}>
-        <Box as="main">{children}</Box>
-      </Box>
-    </>
+      <header>{header}</header>
+      <main style={{ margin: "2rem 0" }}>{children}</main>
+    </div>
   )
 }

@@ -1,6 +1,5 @@
 import React from "react"
 import { graphql } from "gatsby"
-import { Heading, Text, Card } from "rebass"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -16,28 +15,18 @@ export default function({ data, location }) {
         title="All posts"
         keywords={[`blog`, `gatsby`, `javascript`, `react`]}
       />
-      {posts.map(({ node }) => {
-        const title = node.frontmatter.title || node.fields.slug
-        return (
-          <Card key={node.fields.slug} my={[5]} p={[4]}>
-            <Heading fontSize={[1]} mb={[2]}>
-              {node.frontmatter.date}
-            </Heading>
-            <Heading fontSize={[5]}>
-              <Link to={node.fields.slug}>{title}</Link>
-            </Heading>
-            <Text
-              fontSize={[2, 3]}
-              mt={[2]}
-              mb={[2]}
-              lineHeight="1.5"
-              dangerouslySetInnerHTML={{
-                __html: node.frontmatter.description || node.excerpt,
-              }}
-            />
-          </Card>
-        )
-      })}
+      <ul>
+        {posts.map(({ node }) => {
+          const title = node.frontmatter.title || node.fields.slug
+          return (
+            <li key={node.fields.slug}>
+              <h3>
+                <Link to={node.fields.slug}>{title}</Link>
+              </h3>
+            </li>
+          )
+        })}
+      </ul>
     </Layout>
   )
 }
@@ -53,14 +42,11 @@ export const pageQuery = graphql`
     allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
       edges {
         node {
-          excerpt
           fields {
             slug
           }
           frontmatter {
-            date(formatString: "MMMM DD, YYYY")
             title
-            description
           }
         }
       }

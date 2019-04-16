@@ -1,6 +1,5 @@
 import React from "react"
 import { graphql } from "gatsby"
-import { Heading, Text, Box, Card } from "rebass"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -17,42 +16,32 @@ export default function({ data, pageContext, location }) {
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
       />
-      <Card bg="#fff" p={[4]} my={[5]}>
-        <Heading fontSize={[1]} mb={[3]} color="rgba(14,30,37,.54)">
-          {post.frontmatter.date}
-        </Heading>
-        <Heading fontSize={[6]} color="">
-          {post.frontmatter.title}
-        </Heading>
-
-        <Text
-          fontSize={[2, 3]}
-          my={[5]}
-          lineHeight="1.8"
-          dangerouslySetInnerHTML={{ __html: post.html }}
-        />
+      <article>
+        <h5>{post.frontmatter.date}</h5>
+        <h1>{post.frontmatter.title}</h1>
+        <div dangerouslySetInnerHTML={{ __html: post.html }} />
         <hr />
-        <Box as="ul" style={{ listStyle: "none" }}>
+        <ul>
           {previous && (
             <li>
-              <Heading my={[4]} fontSize={[3]}>
+              <h4>
                 <Link to={previous.fields.slug} rel="prev">
-                  Next post: {previous.frontmatter.title}
+                  Next: {previous.frontmatter.title}
                 </Link>
-              </Heading>
+              </h4>
             </li>
           )}
           {next && (
             <li>
-              <Heading my={[4]} fontSize={[3]}>
+              <h4>
                 <Link to={next.fields.slug} rel="next">
-                  Previous post: {next.frontmatter.title}
+                  Previous: {next.frontmatter.title}
                 </Link>
-              </Heading>
+              </h4>
             </li>
           )}
-        </Box>
-      </Card>
+        </ul>
+      </article>
     </Layout>
   )
 }
