@@ -1,5 +1,4 @@
 import React from "react"
-import { Heading, Box } from "rebass"
 import GlobalStyle from "../components/styles/globalStyles"
 
 import Link from "../components/styles/link"
