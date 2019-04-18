@@ -5,7 +5,7 @@ description: 😓 + 🕥 + 🙏 !== Strategy
 tags: ["Notes", "Learning"]
 ---
 
-My notes on [This youtube video]('') by [Andy Sterkowitz]('')
+My notes on [This youtube video](https://www.youtube.com/watch?v=IHQ-UUj0bxs) by [Andy Sterkowitz](https://www.youtube.com/channel/UCZ9qFEC82qM6Pk-54Q4TVWA)
 
 **Takeaway**
 
@@ -54,7 +54,7 @@ My notes on [This youtube video]('') by [Andy Sterkowitz]('')
 
 ## My Thoughts
 
-Finding the sweetspot between allocating time for active versus passive learning is something I have struggled with as a self-learner. I spend a lot of time banging my head aginst problems, rather than watching others solve problems on screen (tutorial pergatory [link it]('')).
+Finding the sweetspot between allocating time for active versus passive learning is something I have struggled with as a self-learner. I spend a lot of time banging my head aginst problems, rather than watching others solve problems on screen ([tutorial purgatory](https://medium.freecodecamp.org/how-to-escape-tutorial-purgatory-as-a-new-developer-or-at-any-time-in-your-career-e3a4b2384a40)).
 
 That's both good and bad. The good being gaining a stronger understanding of the what and how of problem solving. But there's always a latent question of whether this is the best use of my time. And there are certainly concepts that are best learned by reading and watching videos than intuited from practice.
 

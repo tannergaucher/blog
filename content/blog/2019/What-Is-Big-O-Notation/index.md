@@ -5,7 +5,7 @@ description: ""
 tags: ["Notes", "Algorithms"]
 ---
 
-My notes on [Article Title]('') By [Beau Carnes]('')
+My notes on [This article](https://medium.freecodecamp.org/big-o-notation-simply-explained-with-illustrations-and-video-87d5a71c0174) By [Beau Carnes](https://twitter.com/carnesbeau?lang=en)
 
 **Takeaway**
 
