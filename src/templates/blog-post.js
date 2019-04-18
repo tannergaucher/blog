@@ -4,7 +4,7 @@ import styled from "styled-components"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import NextPrev from "../components/NextPrev"
+import NextPrev from "../components/nextPrev"
 
 const Styled = styled.article`
   ul {
