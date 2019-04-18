@@ -25,6 +25,10 @@ body {
  p {
   line-height: 1.667;
 }
+
+a {
+  color: blue;
+}
 `
 
 export default GlobalStyle

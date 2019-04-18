@@ -1,5 +1,5 @@
 import React from "react"
-import Link from "./styles/Link"
+import Link from "gatsby-link"
 
 export default function nextPrev({ next, previous }) {
   return (

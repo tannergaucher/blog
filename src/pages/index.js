@@ -4,7 +4,7 @@ import styled from "styled-components"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import Link from "../components/styles/link"
+import Link from "gatsby-link"
 
 const Styled = styled.ul`
   li {

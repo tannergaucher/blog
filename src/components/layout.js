@@ -1,8 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import GlobalStyle from "../components/styles/globalStyles"
-
-import Link from "../components/styles/link"
+import Link from "gatsby-link"
 
 const Main = styled.main`
   max-width: 850px;

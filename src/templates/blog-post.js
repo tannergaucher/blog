@@ -4,7 +4,6 @@ import styled from "styled-components"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import Link from "../components/styles/link"
 import NextPrev from "../components/NextPrev"
 
 const Styled = styled.article`
@@ -23,15 +22,10 @@ const Styled = styled.article`
       margin-bottom: 4em;
     }
   }
-
-  /* @media (min-width: 1000px) {
-    .main-text {
-      margin-bottom: 6em;
-    }
-  } */
 `
 
 export default function({ data, pageContext, location }) {
+  console.log(<NextPrev />)
   const post = data.markdownRemark
   const siteTitle = data.site.siteMetadata.title
   const { previous, next } = pageContext
