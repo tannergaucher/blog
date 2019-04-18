@@ -2,15 +2,20 @@
 title: Best Learning Strategies for Beginners Video by Andy Sterkowitz
 date: "2019-04-09"
 description: 😓 + 🕥 + 🙏 !== Strategy
+tags: ["Notes", "Learning"]
 ---
 
-**Takeaway: Time plus effort plus hope is not a strategy. You need to be systematic about how you learn.**
+My notes on [This youtube video]('') by [Andy Sterkowitz]('')
 
-1. Find the sweetspot between active and passive learning.
-2. Apply spacing to your learning.
-3. Teach that you learn.
-4. Keep a list of things you don't know.
-5. Know how to rest and recover.
+**Takeaway**
+
+> Time plus effort plus hope is not a strategy. You need to be systematic about how you learn.
+
+1. Find the sweetspot between active and passive learning
+2. Apply spacing to your learning
+3. Teach that you learn
+4. Keep a list of things you don't know
+5. Know how to rest and recover
 
 ## Active Versus Passive Learning
 
@@ -18,7 +23,7 @@ description: 😓 + 🕥 + 🙏 !== Strategy
 - Active learning is putting knowledge into practice
 - Need to find the sweetspot between the two
 - Ratio can and will change over time
-- Early on, likely more conceptual
+- Early on, likely more conceptual / passive
 - Later on, usually more active
 
 ## Use Spacing
@@ -26,19 +31,18 @@ description: 😓 + 🕥 + 🙏 !== Strategy
 - Avoid cramming
 - Better to spread learning out over time
 - If taking a 7 hour course, better 7 days of 1 hour than 1 day of 7 hours
-- Spreading out over time means revisiting. Forgetting and re-remembering
+- Spreading out over time means revisiting, revising, forgetting, and re-remembering
 
-## Teaching Concepts that You've Just Learned
+## Teach Concepts that You've Just Learned
 
 - Best way to test your knowledge of something you've just learned is to write a blog post about it
-- Write about it, or explain concept to others
-- Can shed light on grey areas that you think you know well
+- Try to explaine the concept to others
+- This will shed light on gaps in your own knowledge
 
 ## Keep Track of All Things You Have Questions About
 
-- Keep track of all your why?
-- Don't always want to go down a rabit hole, switch contexts, when you have a question
 - Keep a list of things that you don't understand
+- Don't always want switch contexts and go down a rabbit hole when you have a question
 - Later on, persue these questions as time permits
 
 ## Know How to Rest and Recover
@@ -50,5 +54,8 @@ description: 😓 + 🕥 + 🙏 !== Strategy
 
 ## My Thoughts
 
-- Finding the sweetspot between active and passive is tough as a self-learner
-- I probably spend too much time banging my head against things, compared to the amount of time I spend reading and learning. But I think that's both good and bad
+Finding the sweetspot between allocating time for active versus passive learning is something I have struggled with as a self-learner. I spend a lot of time banging my head aginst problems, rather than watching others solve problems on screen (tutorial pergatory [link it]('')).
+
+That's both good and bad. The good being gaining a stronger understanding of the what and how of problem solving. But there's always a latent question of whether this is the best use of my time. And there are certainly concepts that are best learned by reading and watching videos than intuited from practice.
+
+I like the idea of keeping a list of concepts questions as they pop up and batching them for later. I've started to do this already. And becuase I've very on board with the ideas of teach what you learn and learning in the open, the plan is to take these questions and turn them into short blog posts.

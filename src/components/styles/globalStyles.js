@@ -3,15 +3,10 @@ import * as fonts from "../../fonts"
 
 const GlobalStyle = createGlobalStyle`
 
-
 @font-face {
   font-family: "Space Grotesk";
-  src: url('${fonts.SpaceGroteskMedium}') format('woff');
-  src: url('${fonts.SpaceGroteskBold}') format('woff');
- 
+  src: url('${fonts.SpaceGroteskRegular}') format('woff');
 }
-
-
 
 html {
   -ms-text-size-adjust: 100%;
@@ -27,17 +22,9 @@ body {
   font-size: 22px;
 }
 
-li, p {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+ p {
+  line-height: 1.667;
 }
-
-
-
-h1,h2,h3,h4,h5,h6 {
-
-}
-
-
 `
 
 export default GlobalStyle

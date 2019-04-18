@@ -1,7 +1,17 @@
 import React from "react"
+import styled from "styled-components"
 import GlobalStyle from "../components/styles/globalStyles"
 
 import Link from "../components/styles/link"
+
+const Main = styled.main`
+  max-width: 850px;
+  margin: 2em auto;
+
+  @media (min-width: 700px) {
+    margin: 4em auto;
+  }
+`
 
 export default function({ location, children, title }) {
   const rootPath = `${__PATH_PREFIX__}/`
@@ -10,23 +20,26 @@ export default function({ location, children, title }) {
   if (location.pathname === rootPath) {
     header = (
       <>
-        <h1>{title}</h1>
-        <h5>Software Development. Learning in the Open.</h5>
+        <h4 style={{ marginTop: 0, marginBottom: "0" }}>{title}</h4>
+        <h6 style={{ marginTop: 0 }}>
+          Software Development. Learning in the Open.
+        </h6>
+        {/* <a href="http://www.github.com/tannergaucher">Github</a> */}
       </>
     )
   } else {
     header = (
-      <h4>
+      <h4 style={{ marginTop: 0 }}>
         <Link to={`/`}>Tanner Gaucher</Link>
       </h4>
     )
   }
 
   return (
-    <div style={{ maxWidth: "850px", margin: "0 auto" }}>
-      <GlobalStyle />
+    <div style={{ padding: ".5em" }}>
       <header>{header}</header>
-      <main style={{ margin: "2rem 0" }}>{children}</main>
+      <GlobalStyle />
+      <Main>{children}</Main>
     </div>
   )
 }

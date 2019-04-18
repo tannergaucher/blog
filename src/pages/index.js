@@ -1,9 +1,28 @@
 import React from "react"
 import { graphql } from "gatsby"
+import styled from "styled-components"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Link from "../components/styles/link"
+
+const Styled = styled.ul`
+  li {
+    margin-bottom: 2em;
+  }
+
+  @media (min-width: 700px) {
+    li {
+      margin: 4em auto;
+    }
+  }
+
+  /* @media (min-width: 1000px) {
+    li {
+      margin: 6em auto;
+    }
+  } */
+`
 
 export default function({ data, location }) {
   const siteTitle = data.site.siteMetadata.title
@@ -15,18 +34,18 @@ export default function({ data, location }) {
         title="All posts"
         keywords={[`blog`, `gatsby`, `javascript`, `react`]}
       />
-      <ul>
+      <Styled>
         {posts.map(({ node }) => {
           const title = node.frontmatter.title || node.fields.slug
           return (
             <li key={node.fields.slug}>
-              <h3>
+              <h2>
                 <Link to={node.fields.slug}>{title}</Link>
-              </h3>
+              </h2>
             </li>
           )
         })}
-      </ul>
+      </Styled>
     </Layout>
   )
 }

@@ -1,0 +1,4 @@
+- Add a share on twitter component
+- Filter by tags
+- Similar Posts component
+- Footer with social links

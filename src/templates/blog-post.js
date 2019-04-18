@@ -1,9 +1,35 @@
 import React from "react"
 import { graphql } from "gatsby"
+import styled from "styled-components"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Link from "../components/styles/link"
+import NextPrev from "../components/NextPrev"
+
+const Styled = styled.article`
+  ul {
+    p {
+      margin-bottom: 0;
+    }
+  }
+
+  .main-text {
+    margin-bottom: 2em;
+  }
+
+  @media (min-width: 700px) {
+    .main-text {
+      margin-bottom: 4em;
+    }
+  }
+
+  /* @media (min-width: 1000px) {
+    .main-text {
+      margin-bottom: 6em;
+    }
+  } */
+`
 
 export default function({ data, pageContext, location }) {
   const post = data.markdownRemark
@@ -16,32 +42,16 @@ export default function({ data, pageContext, location }) {
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
       />
-      <article>
-        <h5>{post.frontmatter.date}</h5>
+      <Styled>
+        <h6 className="date">{post.frontmatter.date}</h6>
         <h1>{post.frontmatter.title}</h1>
-        <div dangerouslySetInnerHTML={{ __html: post.html }} />
+        <div
+          className="main-text"
+          dangerouslySetInnerHTML={{ __html: post.html }}
+        />
         <hr />
-        <ul>
-          {previous && (
-            <li>
-              <h4>
-                <Link to={previous.fields.slug} rel="prev">
-                  Next: {previous.frontmatter.title}
-                </Link>
-              </h4>
-            </li>
-          )}
-          {next && (
-            <li>
-              <h4>
-                <Link to={next.fields.slug} rel="next">
-                  Previous: {next.frontmatter.title}
-                </Link>
-              </h4>
-            </li>
-          )}
-        </ul>
-      </article>
+        <NextPrev next={next} previous={previous} />
+      </Styled>
     </Layout>
   )
 }
