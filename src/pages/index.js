@@ -16,12 +16,6 @@ const Styled = styled.ul`
       margin: 4em auto;
     }
   }
-
-  /* @media (min-width: 1000px) {
-    li {
-      margin: 6em auto;
-    }
-  } */
 `
 
 export default function({ data, location }) {

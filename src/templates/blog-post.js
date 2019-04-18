@@ -25,7 +25,6 @@ const Styled = styled.article`
 `
 
 export default function({ data, pageContext, location }) {
-  console.log(<NextPrev />)
   const post = data.markdownRemark
   const siteTitle = data.site.siteMetadata.title
   const { previous, next } = pageContext
